@@ -12,7 +12,7 @@ import VideoDetail from './components/video_detail'
 const API_KEY = 'AIzaSyCgVONFVGqog2oPgJ71Vot8bFoeeVaKv94';
 // In order to search for youtube videos, we will use a package called: npm install --save youtube-api-search
 // The --save saves our package to our package.json
-
+const channelId = 'UChiZsjOYrMY6wnnq1QvjCDA';
 // Refactoring process to make App into a class to hold the state of our videos, and so that data can persist throughout the app.
 class App extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class App extends Component {
       selectedVideo: null   // Selected video is null so video_detail will show "Loading..." until a selected video is available.
     };
 
-    this.videoSearch('bboy powermoves 2017')
+    this.videoSearch('Lendit Conference 2017')
   } // We're passing props from the App to VideoList to be passed into video_list.js
 
   // tie in the search input with the search results.
@@ -31,7 +31,8 @@ class App extends Component {
     YTSearch(
     {
       key: API_KEY,
-      term: term
+      term: term,
+      channelId: channelId
     },
       (videos) => {                // only works when key: property are the same, // <-- using es6 syntax, we condensed this.setState({ videos: videos }); to just this.setState({ videos });
         this.setState({
