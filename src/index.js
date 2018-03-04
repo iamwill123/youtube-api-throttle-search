@@ -9,7 +9,7 @@ import VideoDetail from './components/video_detail'
 
 // get the API key from https://console.developers.google.com
 // Our top level component (index.js) is responsible for fetching our data, term: "downwards data flow" react term, the most parent component is responsible for fetching the data and pass it downwards.
-const API_KEY = 'AIzaSyCgVONFVGqog2oPgJ71Vot8bFoeeVaKv94';
+const API_KEY = 'AIzaSyCgVONFVGqog2oPgJ71Vot8bFoeeXXXXXX'; // use your own API_KEY
 // In order to search for youtube videos, we will use a package called: npm install --save youtube-api-search
 // The --save saves our package to our package.json
 const channelId = 'UChiZsjOYrMY6wnnq1QvjCDA';
